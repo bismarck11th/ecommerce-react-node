@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
-import { HomeScreen, ProductScreen } from './screens';
+import { CartScreen, HomeScreen, ProductScreen } from './screens';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           </div>
         </header>
         <main>
+          <Route path="/cart/:id?" component={CartScreen} />
           <Route path="/product/:id" component={ProductScreen} />
           <Route exact path="/" component={HomeScreen} />
         </main>
